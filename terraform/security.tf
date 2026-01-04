@@ -30,8 +30,15 @@ resource "azurerm_key_vault" "kv" {
     ]
 
     storage_permissions = [
-      "Get",
+      "Get", "List"
     ]
+  }
+
+  access_policy {
+    tenant_id = data.azurerm_client_config.current.tenant_id
+    # This is the ID from your error message
+    object_id          = "afa3138e-2429-4370-8e1b-b73dd6938159"
+    secret_permissions = ["Get", "List"]
   }
 }
 
