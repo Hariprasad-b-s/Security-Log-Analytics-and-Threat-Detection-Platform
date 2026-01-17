@@ -1,6 +1,4 @@
-Here is a professional, portfolio-ready `README.md` file for your project.
 
-You can copy and paste this directly into your GitHub repository. I have included a **Mermaid diagram** for the architecture, which GitHub renders automatically.
 
 ---
 
