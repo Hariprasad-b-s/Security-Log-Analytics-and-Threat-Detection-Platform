@@ -65,18 +65,19 @@ graph LR
 
 ```bash
 .
-├── infra/                  # Terraform configuration files
+├── dataset/                  # Dataset files
+├── terraform/                  # Terraform configuration files
 │   ├── main.tf             # Provider setup
-│   ├── storage.tf          # ADLS Gen2 & Containers
 │   ├── compute.tf          # Databricks Workspace & Cluster
 │   ├── security.tf         # Key Vault & Access Policies
 │   └── jobs.tf             # Databricks Workflow definitions
 ├── notebooks/              # ETL Logic (PySpark)
 │   ├── 00_Common_Config    # Global setup & Secret retrieval
 │   ├── 02_Bronze_Ingestion # Raw data load
-│   ├── 03_Silver_Cleanse   # Transformations & Schema enforcement
+│   ├── 03_Silver_Transformation   # Transformations & Schema enforcement
 │   └── 04_Gold_Analytics   # Business logic aggregations
-└── README.md
+├── proofs/                 # Proof of concept files
+├── README.md
 
 ```
 
@@ -93,7 +94,7 @@ graph LR
 Run the Terraform script to create the environment.
 
 ```bash
-cd infra
+cd terraform
 terraform init
 terraform apply
 
@@ -121,7 +122,7 @@ Connect Power BI to the Databricks `Gold` tables using the **Azure Databricks Co
 
 ## 📊 Dashboard Preview
 
-> *[Insert your Power BI Screenshot Here]*
+![Dashboard Preview](./Proofs/PowerBi-Report-Screenshot.png)
 
 **Insights Delivered:**
 
@@ -140,10 +141,10 @@ terraform destroy
 
 ## 👨‍💻 Author
 
-**[Your Name]**
+**Hariprasad Bathini Sankaran**
 
-* [LinkedIn]([Your LinkedIn URL])
-* [Portfolio]([Your Portfolio URL])
+* [LinkedIn] https://www.linkedin.com/in/hariprasadbs/
+* [Portfolio] https://hariprasad-b-s.github.io/portfolio/
 
 ---
 
