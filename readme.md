@@ -88,6 +88,9 @@ graph LR
 * Azure Subscription (Free Tier works)
 * Terraform CLI installed
 * Azure CLI (`az login`)
+* Dataset needed for this project
+    * Kaggle dataset https://www.kaggle.com/datasets/aryan208/cybersecurity-threat-detection-logs
+    * For country information you need to get Maxmind GeoIP Countrydatabase
 
 ### 1. Provision Infrastructure
 
